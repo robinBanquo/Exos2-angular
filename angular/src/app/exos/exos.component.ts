@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from '@angular/forms';
+
 
 @Component({
   selector: 'app-exos',
@@ -27,8 +27,7 @@ export class ExosComponent implements OnInit {
   public color = "red";
 
   //exo4
-  name: string = '';
-  inputText= "";
+  inputText : string = "";
 
   /**********************************
    * methodes
@@ -58,6 +57,13 @@ export class ExosComponent implements OnInit {
   //exo3
   public changeColor(color){
     this.color = color
+  }
+
+  //exo4
+  onChange(newValue) {
+    console.log(newValue);
+    this.inputText = newValue;  // don't forget to update the model here
+    // ... do other stuff here ...
   }
   ngOnInit() {
   }
