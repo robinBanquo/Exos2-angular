@@ -1,3 +1,24 @@
-<p>
-  exos works!
-</p>
+<h2>exo1</h2>
+<input name="bla"[type]="type">
+<button (click)="changeInput()">change type</button>
+<hr>
+
+<h2>exo2</h2>
+<button (click)="count(false)">-</button>
+{{counter}}
+<button (click)="count(true)">+</button>
+<hr>
+
+<h2>exo3</h2>
+<div [class]="color" (mouseover)="changeColor('green')" (click)="changeColor('blue')" (mouseleave)="changeColor('red')">
+  <div class="box"></div>
+</div>
+<hr>
+
+<h2>exo4</h2>
+<!--<input type="text" [(ngModel)]="inputText">-->
+<!--<p>{{inputText}}</p>-->
+<input [(ngModel)]="name">
+
+<p>Value: {{ name }}</p>
+
